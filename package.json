@@ -1,0 +1,30 @@
+{
+  "name": "just-promiseify",
+  "version": "1.0.0",
+  "description": "It's a very simple library to convert callback-based flow into Promise style",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter nyan -t 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leftstick/just-promiseify.git"
+  },
+  "keywords": [
+    "promiseify"
+  ],
+  "author": "Howard.Zuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leftstick/just-promiseify/issues"
+  },
+  "homepage": "https://github.com/leftstick/just-promiseify#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "request": "^2.67.0"
+  }
+}
