@@ -22,14 +22,13 @@ var fs = require('fs');
 
 var readFile = promiseify(fs.readFile);
 
-
-//you can customize the copying process
-go('/tmp/file1.txt', '/tmp2/file2.txt', function(content){
-    return content.replace('ABC', 'PLA');
-});
-
-//binary file will be copied directly no matter whether you provide a process function
-go('/tmp/logo.png', '/tmp2/logo2.png');
+readFile(txt, 'utf8')
+    .then(function(data) {
+        console.log('The file content is',data);
+    })
+    .catch(function(err){
+        console.error('Error', err);
+    });
 ```
 
 
