@@ -37,10 +37,15 @@
 
             return new Promise(function(resolve, reject) {
                 var cb = function(err) {
+                    var callbackData = slice.apply(arguments);
+                    if (callbackData.length === 1 && !(err instanceof Error)) {
+                        return resolve.call(this, err);
+                    }
+
                     if (err) {
                         return reject(err);
                     }
-                    var callbackData = slice.apply(arguments);
+
                     if (callbackData.length === 2) {
                         return resolve.call(this, callbackData[1]);
                     }

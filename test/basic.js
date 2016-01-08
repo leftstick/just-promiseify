@@ -58,4 +58,20 @@ describe('basic test', function() {
             .catch(done);
     });
 
+    it('no error', function(done) {
+        var noError = function(name, cb) {
+            setTimeout(function() {
+                cb(name);
+            }, 10);
+        };
+
+        var noErrorify = promiseify(noError);
+        noErrorify('hello')
+            .then(function(data) {
+                expect(data).to.be.equal('hello');
+                done();
+            })
+            .catch(done);
+    });
+
 });
