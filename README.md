@@ -3,6 +3,8 @@ just-promiseify
 [![NPM version][npm-image]][npm-url]
 ![][david-url]
 ![][travis-url]
+![][dt-url]
+![][license-url]
 
 It's a very simple library to convert callback-based flow into Promise style
 
@@ -36,10 +38,9 @@ readFile(txt, 'utf8')
 
 [MIT License](https://raw.githubusercontent.com/leftstick/just-promiseify/master/LICENSE)
 
-
-
-
 [npm-url]: https://npmjs.org/package/just-promiseify
 [npm-image]: https://badge.fury.io/js/just-promiseify.png
-[david-url]: https://david-dm.org/leftstick/just-promiseify.png
 [travis-url]:https://api.travis-ci.org/leftstick/just-promiseify.svg?branch=master
+[david-url]: https://david-dm.org/leftstick/just-promiseify.png
+[dt-url]:https://img.shields.io/npm/dt/just-promiseify.svg
+[license-url]:https://img.shields.io/npm/l/just-promiseify.svg
