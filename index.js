@@ -1,7 +1,7 @@
 /**
  *
  *  @author Howard.Zuo
- *  @date Dec 1, 2015
+ *  @date Feb 13, 2016
  *
  **/
 (function(root, factory) {
@@ -22,14 +22,15 @@
         root.Promiseify = factory();
     }
 }(this, function() {
+    'use strict';
+    var slice = Array.prototype.slice;
+    var Promiseify;
 
     if (typeof Promise === 'undefined') {
         throw new Error('There is no Promise defined in your enviroment, use proper enviroment or inject it manually');
     }
 
-    var slice = Array.prototype.slice;
-
-    var Promiseify = function(func) {
+    Promiseify = function(func) {
 
         return function() {
             var ctx = this;
