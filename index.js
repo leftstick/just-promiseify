@@ -24,7 +24,7 @@
 }(this, function() {
     'use strict';
     var slice = Array.prototype.slice;
-    var Promiseify;
+    var Promiseify = null;
 
     if (typeof Promise === 'undefined') {
         throw new Error('There is no Promise defined in your enviroment, use proper enviroment or inject it manually');
